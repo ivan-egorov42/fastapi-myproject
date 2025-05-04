@@ -9,7 +9,11 @@ from sqlmodel import SQLModel
 from alembic import context
 
 from app.config import settings as cnf
-from app.schemas.task import Task, User, Project
+from app.schemas.games import Game
+from app.schemas.players import Player
+from app.schemas.stats import PlayerStats
+from app.schemas.stats import GameStats
+
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.

@@ -5,7 +5,6 @@ from typing import Optional, Annotated, TypeAlias
 from sqlalchemy import UniqueConstraint
 from sqlmodel import SQLModel, Field as SQLField
 
-
 def _empty_str_or_none(value: str | None) -> None:
     if value is None or value == "":
         return None
