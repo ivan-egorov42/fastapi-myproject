@@ -1,0 +1,46 @@
+************* Module app.db
+app/db.py:8:0: C0301: Line too long (102/100) (line-too-long)
+app/db.py:9:0: C0301: Line too long (116/100) (line-too-long)
+app/db.py:14:0: C0116: Missing function or method docstring (missing-function-docstring)
+app/db.py:33:0: C0116: Missing function or method docstring (missing-function-docstring)
+************* Module app.config
+app/config.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+app/config.py:4:0: C0115: Missing class docstring (missing-class-docstring)
+************* Module app.main
+app/main.py:6:0: C0301: Line too long (103/100) (line-too-long)
+app/main.py:11:0: C0301: Line too long (102/100) (line-too-long)
+app/main.py:17:0: C0301: Line too long (106/100) (line-too-long)
+app/main.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+app/main.py:4:0: W0611: Unused init_database imported from app.db (unused-import)
+************* Module app.routes.auth
+app/routes/auth.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+app/routes/auth.py:6:0: E0611: No name 'UniqueViolation' in module 'psycopg2.errors' (no-name-in-module)
+app/routes/auth.py:27:0: C0116: Missing function or method docstring (missing-function-docstring)
+app/routes/auth.py:40:8: W0707: Consider explicitly re-raising using 'raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail=f'User with email {user.email} already exists') from e' (raise-missing-from)
+app/routes/auth.py:47:0: C0116: Missing function or method docstring (missing-function-docstring)
+app/routes/auth.py:62:4: R1705: Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (no-else-return)
+************* Module app.routes.games
+app/routes/games.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+app/routes/games.py:27:4: W0613: Unused argument 'current_user' (unused-argument)
+app/routes/games.py:70:0: R0913: Too many arguments (6/5) (too-many-arguments)
+************* Module app.routes.utils
+app/routes/utils.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+app/routes/utils.py:17:0: C0116: Missing function or method docstring (missing-function-docstring)
+app/routes/utils.py:23:0: C0116: Missing function or method docstring (missing-function-docstring)
+app/routes/utils.py:23:0: E0102: function already defined line 17 (function-redefined)
+app/routes/utils.py:32:0: C0116: Missing function or method docstring (missing-function-docstring)
+app/routes/utils.py:37:0: C0116: Missing function or method docstring (missing-function-docstring)
+************* Module app.routes.players
+app/routes/players.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+app/routes/players.py:68:0: R0913: Too many arguments (8/5) (too-many-arguments)
+app/routes/players.py:6:0: W0611: Unused and_ imported from sqlmodel (unused-import)
+app/routes/players.py:6:0: W0611: Unused or_ imported from sqlmodel (unused-import)
+************* Module app.routes.stats
+app/routes/stats.py:341:0: C0325: Unnecessary parens after 'not' keyword (superfluous-parens)
+app/routes/stats.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+app/routes/stats.py:1:0: W0611: Unused datetime imported from datetime (unused-import)
+app/routes/stats.py:5:0: W0611: Unused and_ imported from sqlalchemy (unused-import)
+
+-----------------------------------
+Your code has been rated at 8.61/10
+

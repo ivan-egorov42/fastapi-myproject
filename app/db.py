@@ -1,11 +1,15 @@
+"""Database utilities for the project."""
+
+from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_async_engine
+from sqlmodel import Session, SQLModel, create_engine
+
 from app.config import settings as cnf
-from sqlmodel import create_engine, Session, SQLModel
-from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker, AsyncSession
 
 DB_URL = f"postgresql://{cnf.db_username}:{cnf.db_password}@{cnf.db_host}:{cnf.db_port}/{cnf.db_name}"
 ASYNC_DB_URL = f"postgresql+asyncpg://{cnf.db_username}:{cnf.db_password}@{cnf.db_host}:{cnf.db_port}/{cnf.db_name}"
 engine = create_engine(DB_URL, echo=True)
 async_engine = create_async_engine(ASYNC_DB_URL, echo=True)
+
 
 def get_session():
     with Session(engine) as session:
